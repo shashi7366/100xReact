@@ -5,15 +5,17 @@ import './App.css'
 import { RecoilRoot, useSetRecoilState,useRecoilValue} from 'recoil'
 import { countAtom, evenSelector,allTodosAtom} from './store/atoms/countAtom'
 import OtpValidator from './components/OtpValidator/OtpValidator';
+import EffectTest from './components/EffectTest/EffectTest'
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-    <RecoilRoot>
+    {/* <RecoilRoot>
     <Todos/>
-    </RecoilRoot>
+    </RecoilRoot> */}
+    <EffectTest/>
    
     </>
   )
