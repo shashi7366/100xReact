@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import LoadingPage from './pages/loadingPage/LoadingPage';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -31,18 +32,7 @@ function App() {
   let prev;
 
   return (
-   <div>
-   {
-    messages.map((message)=>{
-      if(message.date!=prev){
-        prev=message.date;
-        return <div>{message.date}<p>{message.message}</p></div>
-      }else{
-        return <div>{message.message}</div>
-      }
-    })
-   }
-   </div>
+   <LoadingPage/>
   )
 }
 
